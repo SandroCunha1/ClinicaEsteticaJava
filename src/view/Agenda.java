@@ -25,6 +25,9 @@ public class Agenda extends javax.swing.JFrame {
     public Agenda() {
         initComponents();
         this.controller = new AgendaController(this);
+        
+        
+        
         iniciar();
     }
 
@@ -170,6 +173,7 @@ public class Agenda extends javax.swing.JFrame {
     private void btnAgendarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgendarActionPerformed
         // TODO add your handling code here:
         this.controller.agendar();
+        this.getTxtID().setText("0");
     }//GEN-LAST:event_btnAgendarActionPerformed
 
     private void comboServicoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_comboServicoItemStateChanged
@@ -238,6 +242,8 @@ public class Agenda extends javax.swing.JFrame {
         this.controller.atualizaCliente();
         this.controller.atualizaServico();
         this.controller.atualizaValor();
+        this.getTxtID().setText("0");
+        this.getTxtID().disable();
        }
 
     public JTable getTableAgendamento() {
